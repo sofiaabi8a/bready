@@ -1,0 +1,218 @@
+:root{
+	--menu-hover:#cd9b33;
+	--color-general:#666;
+	--color-titulos:#000;
+	--footer-bg: #22202e;
+	--footer-color: #CCC;
+	--accent: #e5c97b;
+}
+
+body{
+	font-size: 14px;
+	font-family: 'Lora', serif;
+	color: var(--color-general);
+	background: #fff;
+}
+
+/* HEADER */
+header{
+	background-color: #fff;
+	padding: 5px 0;
+	box-shadow: 0px 0px 5px 10px #f2f2f2;
+}
+.navbar-nav .nav-link{
+	color: var(--color-general);
+	font-family: 'Lora', serif;
+	transition: color 0.2s;
+	font-weight: 400;
+	font-size: 1.1em;
+	letter-spacing: 0.02em;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover{
+	color: var(--menu-hover);
+	border-bottom: 2px solid var(--menu-hover);
+}
+.navbar-brand{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.7em;
+	color: var(--color-titulos);
+}
+.header-logo-img {
+    max-height: 100px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HERO SLIDER CON OWL CAROUSEL */
+.hero-slides {
+    background: #fff;
+    padding: 2rem 0 1rem 0;
+    position: relative;
+}
+.hero-img {
+    max-width: 600px;
+    width: 90%;
+}
+.hero-discount {
+    position: absolute;
+    left: 6vw;
+    top: 2vw;
+    background: var(--accent, #e5c97b);
+    color: #fff;
+    border-radius: 50%;
+    padding: 1.2em 1.3em;
+    font-weight: bold;
+    font-size: 1.3em;
+    z-index: 2;
+}
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    pointer-events: none;
+}
+.owl-nav button {
+    background: #fff !important;
+    border: none !important;
+    font-size: 2em;
+    color: #666;
+    pointer-events: all;
+    position: absolute;
+    top: -50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+.owl-nav .owl-prev {
+    left: 2vw;
+}
+.owl-nav .owl-next {
+    right: 2vw;
+}
+.hero-order-btn {
+    background: #fff;
+    border: 1.5px solid var(--accent, #e5c97b);
+    color: var(--accent, #e5c97b);
+    padding: 0.7em 2em;
+    border-radius: 2em;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    transition: background .2s, color .2s;
+}
+.hero-order-btn:hover {
+    background: var(--accent, #e5c97b);
+    color: #fff;
+}
+
+/* DELICIEUX */
+.delicieux-title{
+	font-family: 'Kaushan Script', cursive;
+	color: var(--color-titulos);
+	font-size: 2.4em;
+	margin-bottom: 0.3em;
+}
+.delicieux-subtitle{
+	font-family: 'Lora', serif;
+	font-size: 1.1em;
+	color: var(--color-general);
+	margin-bottom: 2em;
+}
+.delicieux-year{
+	color: var(--color-titulos);
+	font-weight: bold;
+}
+.delicieux h3{
+	font-family: 'Lora', serif;
+	font-size: 1.15em;
+	color: var(--color-titulos);
+	margin: 0.5em 0 0.3em 0;
+	font-weight: 700;
+}
+
+/* INTRO */
+.intro-quote{
+	font-size: 1.2em;
+	color: var(--color-titulos);
+	text-align: center;
+}
+.intro-author-block {
+	text-align: center;
+	margin-top: 1em;
+}
+.intro-author{
+	font-size: 1em;
+	color: var(--color-general);
+	margin-bottom: 0.5em;
+}
+.intro-logo{
+	max-width: 120px;
+	width: 100%;
+	margin-top: 0.2em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* FOOTER centrado */
+.footer-bready{
+	background: var(--footer-bg);
+	color: var(--footer-color);
+}
+.footer-bready .row {
+    align-items: center;
+}
+.footer-logo-img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 180px;
+	width: 100%;
+	height: auto;
+}
+.footer-title{
+	color: #fff;
+	font-family: 'Lora', serif;
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	margin-bottom: 0.2em;
+}
+.footer-desc, .footer-contact, .footer-hours {
+	color: var(--footer-color);
+	font-family: 'Lora', serif;
+	font-size: 1.1em;
+}
+footer #copyright{
+	background-color: #000;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 0.95em;
+	margin-top: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px){
+	.footer-bready .row > div,
+	.delicieux .row > div{
+		text-align: center;
+	}
+}
+@media (max-width: 768px){
+	.hero-discount{
+		left: 10vw; top: 3vw; font-size: 1em;
+	}
+	.hero-img{
+		max-width: 90vw;
+	}
+	.footer-logo-img{
+		max-width: 120px;
+	}
+}
